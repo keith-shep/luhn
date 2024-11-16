@@ -1,3 +1,3 @@
- export function verify(digits: string) : boolean {
+export function verify(digits: string) : boolean {
     return false;
- }
+}
