@@ -1,11 +1,12 @@
 export function verify(digits: string) : boolean {
     const reversed = reverse(digits);
-    const transformed = transform(digits);
+    // console.log(reversed);
+    const transformed = transform(reversed);
     return isValid(transformed);
 }
 
 
-function reverse(digits: string): string {
+export function reverse(digits: string): string {
     return digits.split('').reverse().join('');
 }
 
