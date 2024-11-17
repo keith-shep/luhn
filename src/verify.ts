@@ -1,6 +1,7 @@
 export function verify(digits: string) : boolean {
     const reversed = reverse(digits);
-    return true;
+    const transformed = transform(digits);
+    return isValid(transformed);
 }
 
 
