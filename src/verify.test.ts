@@ -1,39 +1,47 @@
 import {verify, transform, isEven, isDoubleDigit, sumAllDigits} from "./verify";
 
-test('test 1', () => {
+test('verify 1', () => {
     expect(verify('79927398713')).toBe(true);
 })
 
+test('verify 2', () => {
+    expect(verify('4147203059780942')).toBe(false);
+})
 
-test('test 2', () => {
+test('verify 3', () => {
+    expect(verify('4147200059780942')).toBe(true);
+})
+
+
+test('transform 1', () => {
     expect(transform('79927398713')).toBe(70);
 })
 
-test('test 3', () => {
+test('isEven 1', () => {
     expect(isEven(79927398713)).toBe(false);
 })
 
-test('test 4', () => {
+test('isEven 2', () => {
     expect(isEven(79927398714)).toBe(true);
 })
 
-test('test 5', () => {
+test('isDoubleDigit 1', () => {
     expect(isDoubleDigit(10)).toBe(true);
 })
 
-test('test 6', () => {
+test('isDoubleDigit 2', () => {
     expect(isDoubleDigit(9)).toBe(false);
 })
 
-test('test 7', () => {
+test('sumAllDigits 1', () => {
     expect(sumAllDigits(11)).toBe(2);
 })
 
-test('test 8', () => {
+test('sumAllDigits 2', () => {
     expect(sumAllDigits(18)).toBe(9);
 })
 
-test('test 9', () => {
+test('sumAllDigits 3', () => {
     expect(sumAllDigits(123)).toBe(6);
 })
 
