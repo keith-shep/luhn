@@ -44,8 +44,8 @@ export function isDoubleDigit(number: number): boolean {
 
 export function sumAllDigits(number: number): number {
     const digitArray = number.toString()
-                                        .split('')
-                                        .map(digit => Number (digit));
+                            .split('')
+                            .map(digit => Number (digit));
     let result = 0;
     digitArray.forEach((digit) => {
         result += digit;
