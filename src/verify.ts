@@ -27,11 +27,11 @@ export function transform(digits: number): number {
 }
 
 export function isValid(calculatedResult: number): boolean {
-    return calculatedResult % 10 == 0;
+    return calculatedResult % 10 === 0;
 }
 
 export function isEven(number: number): boolean {
-    return number % 2 == 0;
+    return number % 2 === 0;
 }
 
 export function isOdd(number: number): boolean {
