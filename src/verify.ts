@@ -1,6 +1,6 @@
 export function verify(digits: string) : boolean {
-    const reversed = reverse(digits);
-    const transformed = transform(reversed);
+    const reversed: string = reverse(digits);
+    const transformed: number = transform(reversed);
     return isValid(transformed);
 }
 
@@ -10,10 +10,10 @@ export function reverse(digits: string): string {
 }
 
 export function transform(digits: string): number {
-    const digitsArray = digits.split('').map(digit => Number (digit));
+    const digitsArray:number[] = digits.split('').map(digit => Number (digit));
 
-    const resultArray: Array <number> = [];
-    digitsArray.forEach((digit, index) => {
+    const resultArray:number[] = [];
+    digitsArray.forEach((digit: number, index: number) => {
         if (isOdd(index)) {
             digit *= 2;
         }
@@ -22,7 +22,7 @@ export function transform(digits: string): number {
         }
         resultArray.push(digit);
     })
-    const result = Number (resultArray.join(''));
+    const result: number = Number (resultArray.join(''));
     return sumAllDigits(result);
 }
 
@@ -43,11 +43,11 @@ export function isDoubleDigit(number: number): boolean {
 }
 
 export function sumAllDigits(number: number): number {
-    const digitArray = number.toString()
+    const digitArray: number[] = number.toString()
                             .split('')
                             .map(digit => Number (digit));
-    let result = 0;
-    digitArray.forEach((digit) => {
+    let result: number = 0;
+    digitArray.forEach((digit: number) => {
         result += digit;
     })
 
