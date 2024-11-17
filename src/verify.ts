@@ -1,16 +1,16 @@
 export function verify(digits: string) : boolean {
-    const reversed: string = reverse(digits);
+    const reversed: number = reverse(Number (digits));
     const transformed: number = transform(reversed);
     return isValid(transformed);
 }
 
 
-export function reverse(digits: string): string {
-    return digits.split('').reverse().join('');
+export function reverse(digits: number): number {
+    return Number (digits.toString().split('').reverse().join(''));
 }
 
-export function transform(digits: string): number {
-    const digitsArray:number[] = digits.split('').map(digit => Number (digit));
+export function transform(digits: number): number {
+    const digitsArray:number[] = digits.toString().split('').map(digit => Number (digit));
 
     const resultArray:number[] = [];
     digitsArray.forEach((digit: number, index: number) => {

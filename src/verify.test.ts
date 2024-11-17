@@ -1,25 +1,25 @@
 import {verify, transform, isEven, isDoubleDigit, sumAllDigits, reverse} from "./verify";
 
 test('verify 79927398713 is valid', () => {
-    let validNumber = '79927398713';
+    let validNumber = 79927398713;
     let reversed = reverse(validNumber);
-    expect(reversed).toBe('31789372997');
+    expect(reversed).toBe(31789372997);
     expect(transform(reversed)).toBe(70);
-    expect(verify(validNumber)).toBe(true);
+    expect(verify(validNumber.toString())).toBe(true);
 })
 
 test('verify 4147203059780942 is invalid', () => {
-    const invalidNumber = '4147203059780942';
+    const invalidNumber = 4147203059780942;
     let reversed = reverse(invalidNumber);
-    expect(reversed).toBe('2490879503027414');
-    expect(verify(invalidNumber)).toBe(false);
+    expect(reversed).toBe(2490879503027414);
+    expect(verify(invalidNumber.toString())).toBe(false);
 })
 
 test('verify 4147200059780942 is valid', () => {
-    const validNumber = '4147200059780942';
+    const validNumber = 4147200059780942;
     let reversed = reverse(validNumber);
-    expect(reversed).toBe('2490879500027414');
-    expect(verify(validNumber)).toBe(true);
+    expect(reversed).toBe(2490879500027414);
+    expect(verify(validNumber.toString())).toBe(true);
 })
 
 
